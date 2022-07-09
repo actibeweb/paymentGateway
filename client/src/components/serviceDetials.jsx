@@ -6,15 +6,62 @@
 
 
 import { Icon } from '@iconify/react';
-import {AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
+import {AiOutlineArrowUp,AiOutlineDown,AiOutlineMenu,AiFillPhone,AiOutlineCheck,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
  import {BsFillCreditCard2BackFill ,BsPinterest, BsFacebook,BsCheckAll, BsFillPlayBtnFill , BsFillFileBarGraphFill}  from 'react-icons/bs';
 import {FiMapPin} from 'react-icons/fi';
 import {ImCross} from 'react-icons/im';
 import {HiOutlineDesktopComputer} from 'react-icons/hi';
 import {MdPayment} from 'react-icons/md';
-
-
+import React, {useState} from 'react';
+// import logo from './logo.svg';
+import '../App.css';
+import {FaGooglePay,FaCcStripe,FaPaypal} from 'react-icons/fa';
+import {SiPaytm,SiRazorpay,SiSamsungpay} from 'react-icons/si';
+import StripeCheckout from "react-stripe-checkout";
+import {BiUpArrowAlt} from 'react-icons/bi';
 export default function Gallery() {
+	var integer;
+	const [message, setMessage] = useState('');
+    const handleChange = event => {
+		setMessage(event.target.value);}
+		const handleClick = event => {
+			event.preventDefault();
+		
+			// 👇️ value of input field
+			console.log( message);
+			 
+		console.log(integer+1);
+			// 👇️ set value of input field
+			setMessage('New value');
+		  };
+		  var message_parse = parseInt(message);
+	const [product ,setProduct] = useState({
+		name: "React From Fb",
+		price: 10,
+		productBy: "Facebook"
+	  });
+	
+	
+	  const makePayment = token => {
+		const body = {
+		  token,
+		  product
+		}
+		const headers = {
+		  "Content-Type": "application/json"
+		}
+	
+		return fetch(`http://localhost:8282/payment`, {
+		  method: "POST",
+		  headers,
+		  body: JSON.stringify(body)
+		}).then(response => {
+		  console.log("RESPONSE ", response);
+		  const {status} = response;
+		  console.log("STATUS ", status)
+		}).catch(error => console.log(error));
+	
+	  };
 
 	return(
 		<div className="">
@@ -319,12 +366,12 @@ Single Blog
 <h2>How Online Banking Works</h2>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates odio omnis dolor numquam dignissimos enim assumenda itaque nemo tenetur dolores incidunt, animi quo quae odit corporis, nihil architecto inventore. </p>
 <ul class="content-feature-list style2 list-style">
-<li><i class="ri-check-line"></i>Opening accounts </li>
-<li><i class="ri-check-line"></i>Transferring funds </li>
-<li><i class="ri-check-line"></i>Applying for loans </li>
-<li><i class="ri-check-line"></i>Depositing checks </li>
-<li><i class="ri-check-line"></i>Staying informed </li>
-<li><i class="ri-check-line"></i>24/7 on time services </li>
+<li><i class=""><AiOutlineCheck /></i>Opening accounts </li>
+<li><i class=""><AiOutlineCheck /></i>Transferring funds </li>
+<li><i class=""><AiOutlineCheck /></i>Applying for loans </li>
+<li><i class=""><AiOutlineCheck /></i>Depositing checks </li>
+<li><i class=""><AiOutlineCheck /></i>Staying informed </li>
+<li><i class=""><AiOutlineCheck /></i>24/7 on time services </li>
 </ul>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates odio omnis dolor numquam dignissimos enim assumenda itaque nemo tenetur dolores incidunt, animi quo quae odit corporis, nihil architecto inventore. </p>
 <h2>More Asked Question</h2>
@@ -333,8 +380,8 @@ Single Blog
 <h2 class="accordion-header" id="headingOne">
 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 <span>
-<i class="ri-arrow-down-s-line plus"></i>
-<i class="ri-arrow-up-s-line minus"></i>
+<i class=""><AiOutlineDown/></i>
+{/* <i class=""><BiUpArrowAlt /></i> */}
 </span>
 What Is Bank Account?
 </button>
@@ -351,8 +398,9 @@ What Is Bank Account?
 <h2 class="accordion-header" id="headingTwo">
 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 <span>
-<i class="ri-arrow-down-s-line plus"></i>
-<i class="ri-arrow-up-s-line minus"></i>
+<i class=""><AiOutlineDown/></i>
+
+{/* <i class="ri-arrow-up-s-line minus"></i> */}
 </span>
 How Do I Activate My Card?
 </button>
@@ -367,8 +415,9 @@ How Do I Activate My Card?
 <h2 class="accordion-header" id="headingThree">
 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 <span>
-<i class="ri-arrow-down-s-line plus"></i>
-<i class="ri-arrow-up-s-line minus"></i>
+<i class=""><AiOutlineDown/></i>
+
+{/* <i class="ri-arrow-up-s-line minus"></i> */}
  </span>
 How Do I Change My Passwoed?
 </button>
@@ -390,38 +439,51 @@ How Do I Change My Passwoed?
 <ul class="list-style">
 <li>
 <a href="service-category.html">
-Mobile Banking
-<span><i class="flaticon-next"></i></span>
+RozarPay
+<span><i class=""><SiRazorpay/></i></span>
 </a>
 </li>
 <li>
 <a href="service-category.html">
-Personal Loans
-<span><i class="flaticon-next"></i></span>
+PhonePay
+<span><i class=""><SiSamsungpay /></i></span>
 </a>
 </li>
 <li>
-<a href="service-category.html">
-Merchant Banking
-<span><i class="flaticon-next"></i></span>
+<a href="service-category-three.html">
+GooglePay
+<span><i class=""><FaGooglePay /></i></span>
 </a>
 </li>
 <li>
-<a href="service-category.html">
-Credit Cards
-<span><i class="flaticon-next"></i></span>
+<StripeCheckout 
+  
+        stripeKey={process.env.REACT_APP_KEY}
+        token={makePayment}
+        name="Buy React" 
+        amount={message_parse * 100}
+        shippingAddress
+        billingAddress
+         >
+		
+<a onClick={handleClick}>
+Stripe
+<span><i class=""><FaCcStripe /></i></span>
+</a>
+
+          {/* <button className="btn-large blue m4">Credit Cards</button> */}
+        </StripeCheckout>
+</li>
+<li>
+<a href="error.html">
+Paypal
+<span><i class=""><FaPaypal/></i></span>
 </a>
 </li>
 <li>
-<a href="service-category.html">
-Online Payment
-<span><i class="flaticon-next"></i></span>
-</a>
-</li>
-<li>
-<a href="service-category.html">
-Corporate Banking
-<span><i class="flaticon-next"></i></span>
+<a href="error.html">
+Paytm
+<span><i class=""><SiPaytm/></i></span>
 </a>
 </li>
 </ul>
@@ -624,7 +686,7 @@ Affiliate Program
 </div>
 
 
-<a href="javascript:void(0)" class="back-to-top bounce"><i class="ri-arrow-up-s-line"></i></a>
+<a href="javascript:void(0)" class="back-to-top bounce"><i class=""><AiOutlineArrowUp/></i></a>
 
 </div>
         

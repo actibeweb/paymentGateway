@@ -19,9 +19,11 @@
 
 
 import { Icon } from '@iconify/react';
-import {AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
+import {AiOutlineArrowUp,AiFillCaretRight,AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
  import {BsFillCreditCard2BackFill ,BsPinterest, BsFacebook,BsCheckAll, BsFillPlayBtnFill , BsFillFileBarGraphFill}  from 'react-icons/bs';
-import {FiMapPin} from 'react-icons/fi';
+import {GoMortarBoard } from 'react-icons/go';
+ import {GrInsecure} from 'react-icons/gr';
+ import {FiMapPin} from 'react-icons/fi';
 import {ImCross} from 'react-icons/im';
 import {HiOutlineDesktopComputer} from 'react-icons/hi';
 import {MdPayment} from 'react-icons/md';
@@ -318,11 +320,11 @@ Single Blog
 <div class="service-card style4">
 <div class="service-info">
 <div class="service-title">
-<span><i class="flaticon-payment-method"></i></span>
+<span><i class=""><MdPayment/></i></span>
 <h3><a href="service-details.html">Fraud Detection</a></h3>
 </div>
 <p>Lorem ipsum dolor sit amet dolor alut const slice elit aliquid dolor ametin perfer endis velit sed fuga volup tation sit praising pain.</p>
-<a href="service-details.html" class="link style1">Learn More <i class="flaticon-right-arrow-1"></i></a>
+<a href="service-details.html" class="link style1">Learn More <i class=""><AiFillCaretRight/></i></a>
 </div>
 </div>
 </div>
@@ -330,11 +332,11 @@ Single Blog
 <div class="service-card style4">
 <div class="service-info">
 <div class="service-title">
-<span><i class="flaticon-computer"></i></span>
+<span><i class=""><HiOutlineDesktopComputer/></i></span>
 <h3><a href="service-details.html">Account Updater</a></h3>
 </div>
 <p>Lorem ipsum dolor sit amet dolor alut const slice elit aliquid dolor ametin perfer endis velit sed fuga volup tation sit praising pain.</p>
-<a href="service-details.html" class="link style1">Learn More <i class="flaticon-right-arrow-1"></i></a>
+<a href="service-details.html" class="link style1">Learn More <i class=""><AiFillCaretRight/></i></a>
 </div>
 </div>
 </div>
@@ -342,11 +344,11 @@ Single Blog
 <div class="service-card style4">
 <div class="service-info">
 <div class="service-title">
-<span><i class="flaticon-loan-1"></i></span>
+<span><i class=""><AiFillBank/></i></span>
 <h3><a href="service-details.html">Payment Invoice</a></h3>
 </div>
 <p>Lorem ipsum dolor sit amet dolor alut const slice elit aliquid dolor ametin perfer endis velit sed fuga volup tation sit praising pain.</p>
-<a href="service-details.html" class="link style1">Learn More <i class="flaticon-right-arrow-1"></i></a>
+<a href="service-details.html" class="link style1">Learn More <i class=""><AiFillCaretRight/></i></a>
 </div>
 </div>
 </div>
@@ -354,11 +356,11 @@ Single Blog
  <div class="service-card style4">
 <div class="service-info">
 <div class="service-title">
-<span><i class="flaticon-secure-shield"></i></span>
+<span><i class=""><GrInsecure/></i></span>
 <h3><a href="service-details.html">Secure Payment</a></h3>
 </div>
 <p>Lorem ipsum dolor sit amet dolor alut const slice elit aliquid dolor ametin perfer endis velit sed fuga volup tation sit praising pain.</p>
-<a href="service-details.html" class="link style1">Learn More <i class="flaticon-right-arrow-1"></i></a>
+<a href="service-details.html" class="link style1">Learn More  <i class=""><AiFillCaretRight/></i></a>
 </div>
 </div>
 </div>
@@ -366,11 +368,11 @@ Single Blog
 <div class="service-card style4">
 <div class="service-info">
 <div class="service-title">
-<span><i class="flaticon-mortarboard"></i></span>
+<span><i class=""><GoMortarBoard/></i></span>
 <h3><a href="service-details.html">Education Loan</a></h3>
 </div>
 <p>Lorem ipsum dolor sit amet dolor alut const slice elit aliquid dolor ametin perfer endis velit sed fuga volup tation sit praising pain.</p>
-<a href="service-details.html" class="link style1">Learn More <i class="flaticon-right-arrow-1"></i></a>
+<a href="service-details.html" class="link style1">Learn More  <i class=""><AiFillCaretRight/></i></a>
 </div>
 </div>
 </div>
@@ -378,11 +380,11 @@ Single Blog
 <div class="service-card style4">
 <div class="service-info">
 <div class="service-title">
-<span><i class="flaticon-loan"></i></span>
+<span><i class=""><AiFillBank/></i></span>
 <h3><a href="service-details.html">Home Loan</a></h3>
 </div>
 <p>Lorem ipsum dolor sit amet dolor alut const slice elit aliquid dolor ametin perfer endis velit sed fuga volup tation sit praising pain.</p>
-<a href="service-details.html" class="link style1">Learn More <i class="flaticon-right-arrow-1"></i></a>
+<a href="service-details.html" class="link style1">Learn More <i class=""><AiFillCaretRight/></i></a>
 </div>
 </div>
 </div>
@@ -545,7 +547,7 @@ Affiliate Program
 </div>
 
 
-<a href="javascript:void(0)" class="back-to-top bounce"><i class="ri-arrow-up-s-line"></i></a>
+<a href="javascript:void(0)" class="back-to-top bounce"><i class=""><AiOutlineArrowUp/></i></a>
 </div>
 
 );

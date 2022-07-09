@@ -1,13 +1,14 @@
 // import axios from "axios";
 import { React,useState } from "react";
 import { Icon } from '@iconify/react';
-import {AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
+import {AiOutlineArrowUp,AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
  import {BsFillCreditCard2BackFill ,BsPinterest, BsFacebook,BsCheckAll, BsFillPlayBtnFill , BsFillFileBarGraphFill}  from 'react-icons/bs';
 import {FiMapPin} from 'react-icons/fi';
 import {ImCross} from 'react-icons/im';
 import {HiOutlineDesktopComputer} from 'react-icons/hi';
 import {MdPayment} from 'react-icons/md';
-
+import Contact from './contact_Second';
+import {BiUpArrowAlt} from 'react-icons/bi';
 // import "./gallery.css";
 
 // export function Gallery() {
@@ -401,7 +402,7 @@ Single Blog
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7009.183915995885!2d77.39335040219089!3d28.551982018691998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef7d41bf32d5%3A0x3f9b363194a323e4!2sSamsung%20India%20Electronics%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1657082764081!5m2!1sen!2sin" ></iframe>
 </div>
 </div>
-<div class="contact-form-area ptb-100 bg-albastor">
+{/* <div class="contact-form-area ptb-100 bg-albastor">
 <img src="assets/img/contact-shape-1.png" alt="Image" class="contact-shape-one animationFramesTwo"/>
 <img src="assets/img/contact-shape-2.png" alt="Image" class="contact-shape-two bounce"/>
  <div class="container">
@@ -455,9 +456,9 @@ Single Blog
 </div>
 </div>
 </div>
-</div>
+</div> */}
 </section>
-
+<Contact/>
 </div>
 
 
@@ -608,9 +609,7 @@ Affiliate Program
 
 </div>
 
-
-<a href="javascript:void(0)" class="back-to-top bounce"><i class="ri-arrow-up-s-line"></i></a>
-
+<a href="javascript:void(0)" class="back-to-top bounce"><i class=""><AiOutlineArrowUp/></i></a>
 
 		</div>
         

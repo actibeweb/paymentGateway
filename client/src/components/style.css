@@ -1794,3 +1794,6 @@ label {
     border: 1px solid #e0b4b4!important;
     color: #9f3a38!important;
 }
+form label {
+    display: flex;
+}

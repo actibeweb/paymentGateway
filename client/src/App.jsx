@@ -7,6 +7,8 @@ import ServiceDetials from './components/serviceDetials';
 import Com from './components/Coming';
 import Category from './components/category'
 import Contact from './components/contact';
+import Sec from './components/categorySecond';
+import Three from './components/categoryThree';
 import {
   BrowserRouter,
   Routes,
@@ -47,6 +49,10 @@ function App() {
       <Route path="/blog-details-right-sidebar.html" element={<Com />} />
       <Route path="/contact.html" element={<Contact />} />
       <Route path="/register.html" element={<Com />} />
+      <Route path="/service-category-second.html" element={<Sec />} />
+      <Route path="/service-category-three.html" element={<Three />} />
+      <Route path="/error.html" element={<Com />} />
+      
 
       
     </Routes>

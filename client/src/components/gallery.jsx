@@ -1,7 +1,7 @@
 // import axios from "axios";
 import { React,useState } from "react";
 import { Icon } from '@iconify/react';
-import {AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
+import {AiOutlineArrowUp,AiOutlineMenu,AiFillPhone,AiFillLinkedin, AiFillTwitterCircle,AiFillBank, AiOutlineGlobal, AiFillCheckCircle,AiFillMail} from 'react-icons/ai';
  import {BsFillCreditCard2BackFill ,BsPinterest, BsFacebook,BsCheckAll, BsFillPlayBtnFill , BsFillFileBarGraphFill}  from 'react-icons/bs';
 import {FiMapPin} from 'react-icons/fi';
 import {ImCross} from 'react-icons/im';
@@ -1047,8 +1047,7 @@ Affiliate Program
 </div>
 
 
-<a href="javascript:void(0)" class="back-to-top bounce"><i class="ri-arrow-up-s-line"></i></a>
-
+<a href="javascript:void(0)" class="back-to-top bounce"><i class=""><AiOutlineArrowUp/></i></a>
 
 
 		</div>

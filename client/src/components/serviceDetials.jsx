@@ -481,8 +481,8 @@ Paypal
 </a>
 </li>
 <li>
-<a href="error.html">
-Paytm
+<a href="scanner.html">
+Scanner
 <span><i class=""><SiPaytm/></i></span>
 </a>
 </li>

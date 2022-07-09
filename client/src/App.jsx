@@ -9,6 +9,10 @@ import Category from './components/category'
 import Contact from './components/contact';
 import Sec from './components/categorySecond';
 import Three from './components/categoryThree';
+import Scanner from './components/pages/Home';
+import Qgenerate from './components/pages/QRgenerator';
+import QScanner from './components/pages/QRscanner';
+
 import {
   BrowserRouter,
   Routes,
@@ -52,6 +56,9 @@ function App() {
       <Route path="/service-category-second.html" element={<Sec />} />
       <Route path="/service-category-three.html" element={<Three />} />
       <Route path="/error.html" element={<Com />} />
+      <Route path="/scanner.html" element={<Scanner />} />
+      <Route path="/qr_generator" element={<Qgenerate />} />
+      <Route path="/qr_scanner" element={<QScanner />} />
       
 
       

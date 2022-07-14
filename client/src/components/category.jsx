@@ -560,7 +560,7 @@ import './style.css';
 
 
 
-
+const {REACT_APP_API_DATA_URL} = process.env;
 
 function App() {
 
@@ -586,7 +586,7 @@ function App() {
 			order_id: data.id,
 			handler: async (response) => {
 				try {
-					const verifyUrl = "http://localhost:8080/api/payment/verify";
+					const verifyUrl = `https://actibepay.herokuapp.com/api/payment/verify`;
 					const { data } = await axios.post(verifyUrl, response);
 					console.log(data);
 				} catch (error) {
@@ -620,7 +620,7 @@ function App() {
 		try {
 			var message_parse = parseInt(message);
 			console.log(message_parse);
-			const orderUrl = "http://localhost:8080/api/payment/orders";
+			const orderUrl = `https://actibepay.herokuapp.com/api/payment/orders`;
 			const { data } = await axios.post(orderUrl, { amount: message_parse});
 			console.log(data);
 			initPayment(data.data);
@@ -918,7 +918,9 @@ Single Blog
       
         <div class="row1">
           <div class="col-50">
+			
             <h3>Billing Address</h3>
+			<div>{process.env.REACT_APP_API_DATA_URL}</div>
             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
             <input type="text" id="fname" name="firstname" placeholder="John M. Doe"/>
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
